@@ -72,7 +72,7 @@ const projectData = [
     description:
       "Designed a youth facing healthcare experience focused on clarity, education, and confidence for first time insurance users.",
     tags: ["UX Design", "Figma", "Research"],
-    link: "#",
+    link: "https://github.com/nedab11/healthcare-survival-kit-repo.git",
   },
   {
     title: "Drug Interaction Intelligence System",
@@ -81,7 +81,7 @@ const projectData = [
     description:
       "Built a data driven project around medication interactions with structured ETL, risk scoring, and visualization for decision support.",
     tags: ["Python", "SQL", "Analytics"],
-    link: "#",
+    link: "https://github.com/nedab11/drug-interaction-intelligence-system",
   },
   {
     title: "Personalized EdTech Experience",
