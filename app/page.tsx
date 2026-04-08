@@ -14,6 +14,7 @@ import {
   Sparkles,
   Star,
 } from "lucide-react";
+
 type DivProps = React.HTMLAttributes<HTMLDivElement>;
 type ButtonProps = React.ButtonHTMLAttributes<HTMLButtonElement> & {
   variant?: "default" | "outline";
@@ -52,7 +53,7 @@ const projectData = [
     category: "Product",
     year: "2026",
     description:
-      "As an AI Product Manager, built and launched an autonomous agent to automate user testing coordination, feedback intake, and outreach workflows, enabling faster iteration cycles and more structured user insights.",
+      "Built and launched an autonomous agent to coordinate user testing, feedback intake, and outreach workflows, helping structure research and speed up iteration.",
     tags: ["AI Agents", "Automation", "User Research"],
     link: "https://retroshift.dev",
   },
@@ -61,8 +62,8 @@ const projectData = [
     category: "Engineering",
     year: "2026",
     description:
-      "Worked on AI workflow systems at Praxie, translating ambiguous operational needs into structured automation and scalable web experiences, while building tools that improved visibility into usage and performance.",
-    tags: ["React", "Web Development", "Product Launch"],
+      "Built workflow-driven web experiences and operational tooling at Praxie, translating business needs into structured automation and scalable product experiences.",
+    tags: ["React", "Automation", "Web Development"],
     link: "https://retroshift.dev",
   },
   {
@@ -70,17 +71,17 @@ const projectData = [
     category: "Design",
     year: "2025",
     description:
-      "Designed a youth facing healthcare experience focused on clarity, education, and confidence for first time insurance users.",
-    tags: ["UX Design", "Figma", "Research"],
-    link: "https://github.com/nedab11/healthcare-survival-kit-repo.git",
+      "Designed a digital healthcare platform to help young adults understand insurance, manage care, and build confidence navigating healthcare systems.",
+    tags: ["UX Design", "Research", "Health Tech"],
+    link: "https://github.com/nedab11/healthcare-survival-kit-repo",
   },
   {
     title: "Drug Interaction Intelligence System",
     category: "Data",
     year: "2025",
     description:
-      "Built a data driven project around medication interactions with structured ETL, risk scoring, and visualization for decision support.",
-    tags: ["Python", "SQL", "Analytics"],
+      "Built a Python and MongoDB pipeline to collect, structure, and analyze drug interaction data, supporting risk scoring and high-risk medication pair analysis.",
+    tags: ["Python", "MongoDB", "Data Pipeline"],
     link: "https://github.com/nedab11/drug-interaction-intelligence-system",
   },
   {
@@ -88,8 +89,8 @@ const projectData = [
     category: "Engineering",
     year: "2024",
     description:
-      "Contributed to web experiences and educational product ideas that balanced usability, storytelling, and practical implementation.",
-    tags: ["React", "Frontend", "UI"],
+      "Contributed to educational web experiences and product ideas focused on usability, accessibility, and practical learning outcomes for students.",
+    tags: ["Frontend", "EdTech", "UI"],
     link: "https://knodemy.ai",
   },
 ];
@@ -111,7 +112,6 @@ const experienceData = [
     description:
       "Built AI workflow templates and internal dashboards, turning business needs into structured automation that improved operations and visibility.",
   },
-  
   {
     title: "AWS Cloud Technical Cohort",
     org: "Amazon Web Services",
@@ -147,7 +147,7 @@ const skillGroups = [
       "Stakeholder Communication",
       "Agile Workflows",
       "Customer Onboarding",
-      "Cross Functional Collaboration"
+      "Cross Functional Collaboration",
     ],
   },
   {
@@ -158,7 +158,7 @@ const skillGroups = [
       "Automation Systems",
       "API Integration",
       "Process Optimization",
-      "Workflow Templates"
+      "Workflow Templates",
     ],
   },
   {
@@ -169,7 +169,7 @@ const skillGroups = [
       "ETL Design",
       "Data Modeling",
       "Dashboards",
-      "Data Driven Decision Making"
+      "Data Driven Decision Making",
     ],
   },
   {
@@ -180,7 +180,7 @@ const skillGroups = [
       "IAM",
       "VPC",
       "Cloud Architecture",
-      "Deployment Pipelines"
+      "Deployment Pipelines",
     ],
   },
   {
@@ -191,27 +191,95 @@ const skillGroups = [
       "Figma",
       "Interaction Design",
       "UI Prototyping",
-      "User Experience"
+      "User Experience",
     ],
   },
   {
     title: "Tools",
-    skills: [
-      "Jira",
-      "Git",
-      "GitHub",
-      "Tableau",
-      "Power BI",
-      "Excel"
-    ],
+    skills: ["Jira", "Git", "GitHub", "Tableau", "Power BI", "Excel"],
   },
 ];
+
+const skillProofs: Record<string, string> = {
+  "Product Lifecycle Management":
+    "Managed features from discovery and technical scoping through release coordination and feedback loops.",
+  "Feature Prioritization":
+    "Translated user needs and product goals into structured tickets, priorities, and execution plans.",
+  "Stakeholder Communication":
+    "Worked across product, operations, and technical teams to keep work aligned and moving.",
+  "Agile Workflows":
+    "Built experience working in fast-moving environments with changing priorities and rapid iteration.",
+  "Customer Onboarding":
+    "Supported onboarding and feedback workflows that helped structure early user insights.",
+  "Cross Functional Collaboration":
+    "Worked across multiple scopes where communication and coordination were essential to execution.",
+
+  "AI Workflow Design":
+    "Built workflow-driven systems focused on automating operational and research processes.",
+  "Prompt Engineering":
+    "Designed prompt-based workflows to support AI outputs and more structured automation.",
+  "Automation Systems":
+    "Created tools that reduced manual coordination and improved consistency in recurring tasks.",
+  "API Integration":
+    "Worked with connected systems and product requirements that relied on structured integration logic.",
+  "Process Optimization":
+    "Focused on simplifying workflows to improve speed, clarity, and operational visibility.",
+  "Workflow Templates":
+    "Built reusable workflow structures to support repeatable business and product processes.",
+
+  Python: "Used Python for data processing, ETL work, scripting, and analytical project development.",
+  SQL: "Worked with SQL and database systems for querying, modeling, and structured data analysis.",
+  "ETL Design":
+    "Built data pipelines that cleaned, structured, and loaded project data for analysis.",
+  "Data Modeling":
+    "Designed structured data systems for analytics, decision support, and reporting.",
+  Dashboards:
+    "Built and supported visibility tools that helped organize performance and usage insights.",
+  "Data Driven Decision Making":
+    "Used data and feedback to guide prioritization, project refinement, and execution.",
+
+  "AWS EC2":
+    "Built cloud foundations through AWS cohort work focused on infrastructure and deployment patterns.",
+  "AWS S3":
+    "Worked with cloud storage concepts and AWS services through technical cohort training.",
+  IAM: "Built familiarity with cloud access control and permissions through AWS learning and practice.",
+  VPC: "Developed foundational understanding of network and infrastructure concepts in AWS environments.",
+  "Cloud Architecture":
+    "Studied core cloud infrastructure patterns through hands-on cohort work.",
+  "Deployment Pipelines":
+    "Built familiarity with deployment workflows in both product and cloud-focused environments.",
+
+  React: "Built frontend experiences with React for workflow-driven and educational web projects.",
+  Tailwind:
+    "Used Tailwind to build responsive interfaces with clean structure and strong visual consistency.",
+  Figma: "Designed and organized product concepts, wireframes, and UX flows using Figma.",
+  "Interaction Design": "Focused on making workflows intuitive, usable, and easy to navigate.",
+  "UI Prototyping":
+    "Built interface concepts that translated product ideas into testable visual experiences.",
+  "User Experience": "Centered usability, clarity, and trust across product and design decisions.",
+
+  Jira: "Used Jira to structure feature execution, priorities, and implementation details.",
+  Git: "Used Git to manage version control across technical and portfolio projects.",
+  GitHub: "Published and maintained project repositories for technical and design work.",
+  Tableau: "Built data visualization experience through coursework and analytical storytelling.",
+  "Power BI": "Developed familiarity with dashboarding and presenting structured insights.",
+  Excel: "Used Excel for organizing data, analysis, and workflow support.",
+};
 
 const navItems = ["About", "Projects", "Experience", "Skills", "Contact"];
 
 function LinkedInIcon(props: IconProps) {
   return (
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" {...props}>
+    <svg
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.8"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      aria-hidden="true"
+      {...props}
+    >
       <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-12h4v2" />
       <rect x="2" y="9" width="4" height="12" rx="1" />
       <circle cx="4" cy="4" r="2" />
@@ -221,7 +289,16 @@ function LinkedInIcon(props: IconProps) {
 
 function GitHubIcon(props: IconProps) {
   return (
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" {...props}>
+    <svg
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.8"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      aria-hidden="true"
+      {...props}
+    >
       <path d="M9 19c-4.3 1.4-4.3-2.5-6-3" />
       <path d="M15 22v-3.9a3.4 3.4 0 0 0-.9-2.6c3 0 6-1.8 6-6a4.7 4.7 0 0 0-1.3-3.2 4.3 4.3 0 0 0-.1-3.2s-1-.3-3.3 1.3a11.5 11.5 0 0 0-6 0C7 3 6 3.3 6 3.3a4.3 4.3 0 0 0-.1 3.2A4.7 4.7 0 0 0 4.6 9.7c0 4.2 3 6 6 6a3.4 3.4 0 0 0-.9 2.6V22" />
     </svg>
@@ -229,10 +306,19 @@ function GitHubIcon(props: IconProps) {
 }
 
 function runPortfolioTests() {
-  console.assert(Array.isArray(projectData) && projectData.length > 0, "Expected projectData to contain at least one project.");
-  console.assert(Array.isArray(skillGroups) && skillGroups.length > 0, "Expected skillGroups to contain at least one skill group.");
+  console.assert(
+    Array.isArray(projectData) && projectData.length > 0,
+    "Expected projectData to contain at least one project."
+  );
+  console.assert(
+    Array.isArray(skillGroups) && skillGroups.length > 0,
+    "Expected skillGroups to contain at least one skill group."
+  );
   console.assert(navItems.includes("Projects"), "Expected navItems to include Projects.");
-  console.assert(projectData.some((project) => project.category === "Product"), "Expected at least one Product project.");
+  console.assert(
+    projectData.some((project) => project.category === "Product"),
+    "Expected at least one Product project."
+  );
   console.assert(
     skillGroups.every((group) => Array.isArray(group.skills) && group.skills.length > 0),
     "Expected every skill group to include at least one skill."
@@ -246,6 +332,7 @@ export default function InteractivePersonalWebsite() {
       section.scrollIntoView({ behavior: "smooth", block: "start" });
     }
   };
+
   const [activeFilter, setActiveFilter] = useState("All");
   const [activeSkillGroup, setActiveSkillGroup] = useState(skillGroups[0].title);
 
@@ -256,7 +343,8 @@ export default function InteractivePersonalWebsite() {
     return projectData.filter((project) => project.category === activeFilter);
   }, [activeFilter]);
 
-  const currentSkillGroup = skillGroups.find((group) => group.title === activeSkillGroup) || skillGroups[0];
+  const currentSkillGroup =
+    skillGroups.find((group) => group.title === activeSkillGroup) || skillGroups[0];
 
   useEffect(() => {
     runPortfolioTests();
@@ -286,12 +374,21 @@ export default function InteractivePersonalWebsite() {
           </a>
           <nav className="hidden gap-6 md:flex">
             {navItems.map((item) => (
-              <a key={item} href={`#${item.toLowerCase()}`} className="text-sm text-[#4B2E2E]/70 transition hover:text-[#4B2E2E]">
+              <a
+                key={item}
+                href={`#${item.toLowerCase()}`}
+                className="text-sm text-[#4B2E2E]/70 transition hover:text-[#4B2E2E]"
+              >
                 {item}
               </a>
             ))}
           </nav>
-          <Button className="rounded-full bg-white text-neutral-950 hover:bg-white/90">Resume</Button>
+          <a
+            href="mailto:nedab@uw.edu"
+            className="inline-flex items-center justify-center rounded-full bg-white px-5 py-2 text-neutral-950 transition hover:bg-white/90"
+          >
+            Contact
+          </a>
         </div>
       </header>
 
@@ -358,15 +455,17 @@ export default function InteractivePersonalWebsite() {
                 className="mt-10 grid max-w-3xl grid-cols-2 items-stretch gap-4 xl:grid-cols-4"
               >
                 {[
-                  ["Product", "Strategy to launch"],
-                  ["Data", "Insight to action"],
-                  ["Design", "Meaningful interaction"],
-                  ["People", "Clear communication"],
+                  ["Product", "From concept to launch"],
+                  ["Data", "Structured analysis"],
+                  ["Design", "User-centered systems"],
+                  ["Execution", "Cross-functional delivery"],
                 ].map(([label, value]) => (
                   <Card key={label} className="h-full rounded-3xl border-[#F1D6DC] bg-[#FFF7FA] backdrop-blur-md">
                     <CardContent className="flex h-full min-h-[150px] flex-col justify-between p-5">
                       <div className="text-sm text-[#4B2E2E]/50">{label}</div>
-                      <div className="mt-4 text-[1.05rem] font-medium leading-8 text-[#4B2E2E] [text-wrap:balance]">{value}</div>
+                      <div className="mt-4 text-[1.05rem] font-medium leading-8 text-[#4B2E2E] [text-wrap:balance]">
+                        {value}
+                      </div>
                     </CardContent>
                   </Card>
                 ))}
@@ -396,9 +495,11 @@ export default function InteractivePersonalWebsite() {
                       <div className="flex items-center gap-2 text-[#4B2E2E]/60">
                         <Briefcase className="h-4 w-4" /> Experience
                       </div>
-                      <div className="mt-4 max-w-[10ch] text-2xl font-semibold leading-tight [text-wrap:balance] xl:text-[2rem]">Multi disciplinary</div>
+                      <div className="mt-4 max-w-[12ch] text-2xl font-semibold leading-tight [text-wrap:balance] xl:text-[2rem]">
+                        Cross-functional execution
+                      </div>
                       <p className="mt-2 text-sm leading-6 text-[#4B2E2E]/60">
-                        Product, data, design, engineering, and client facing work presented in one cohesive story.
+                        Experience across product, operations, AI workflows, data systems, and customer-facing work in fast-moving environments.
                       </p>
                     </CardContent>
                   </Card>
@@ -407,9 +508,11 @@ export default function InteractivePersonalWebsite() {
                       <div className="flex items-center gap-2 text-[#4B2E2E]/60">
                         <Star className="h-4 w-4" /> Strength
                       </div>
-                      <div className="mt-4 max-w-[9ch] text-2xl font-semibold leading-tight [text-wrap:balance] xl:text-[2rem]">Fast learner</div>
+                      <div className="mt-4 max-w-[10ch] text-2xl font-semibold leading-tight [text-wrap:balance] xl:text-[2rem]">
+                        Startup speed
+                      </div>
                       <p className="mt-2 text-sm leading-6 text-[#4B2E2E]/60">
-                        Comfortable moving from ambiguity to polished execution in fast paced environments.
+                        Comfortable handling shifting priorities, tight feedback loops, and ownership across evolving scopes of work.
                       </p>
                     </CardContent>
                   </Card>
@@ -417,8 +520,10 @@ export default function InteractivePersonalWebsite() {
                     <CardContent className="p-5">
                       <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
                         <div>
-                          <div className="text-sm text-[#4B2E2E]/50">Signature style</div>
-                          <div className="mt-2 max-w-[16ch] text-[1.65rem] font-semibold leading-tight [text-wrap:balance] xl:max-w-[18ch] xl:text-[2rem]">Thoughtful systems with strong visual presence</div>
+                          <div className="text-sm text-[#4B2E2E]/50">Focus</div>
+                          <div className="mt-2 max-w-[18ch] text-[1.65rem] font-semibold leading-tight [text-wrap:balance] xl:max-w-[20ch] xl:text-[2rem]">
+                            AI workflows, product systems, and practical user experiences
+                          </div>
                         </div>
                         <motion.div
                           animate={{ rotate: [0, 6, -4, 0] }}
@@ -542,16 +647,26 @@ export default function InteractivePersonalWebsite() {
                         <div className="text-sm text-[#4B2E2E]/45">
                           {project.category} • {project.year}
                         </div>
-                        <h3 className="mt-3 text-2xl font-semibold leading-tight [text-wrap:balance]">{project.title}</h3>
+                        <h3 className="mt-3 text-2xl font-semibold leading-tight [text-wrap:balance]">
+                          {project.title}
+                        </h3>
                       </div>
-                      <a href={project.link} className="rounded-full border border-[#F1D6DC] bg-[#FFF7FA] p-3 transition group-hover:-translate-y-0.5 group-hover:translate-x-0.5">
+                      <a
+                        href={project.link}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="rounded-full border border-[#F1D6DC] bg-[#FFF7FA] p-3 transition group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
+                      >
                         <ExternalLink className="h-4 w-4" />
                       </a>
                     </div>
                     <p className="mt-5 text-sm leading-7 text-[#4B2E2E]/70">{project.description}</p>
                     <div className="mt-6 flex flex-wrap gap-2">
                       {project.tags.map((tag) => (
-                        <span key={tag} className="rounded-full border border-[#F1D6DC] bg-black/20 px-3 py-1 text-xs text-[#4B2E2E]/65">
+                        <span
+                          key={tag}
+                          className="rounded-full border border-[#F1D6DC] bg-black/20 px-3 py-1 text-xs text-[#4B2E2E]/65"
+                        >
                           {tag}
                         </span>
                       ))}
@@ -566,7 +681,6 @@ export default function InteractivePersonalWebsite() {
         <section id="experience" className="py-24">
           <div className="mb-10">
             <div className="text-sm uppercase tracking-[0.3em] text-[#4B2E2E]/45">Experience</div>
-            <h2 className="mt-4 text-3xl font-semibold sm:text-4xl">A timeline with shape, not just dates.</h2>
           </div>
 
           <div className="relative">
@@ -606,7 +720,7 @@ export default function InteractivePersonalWebsite() {
               <div className="text-sm uppercase tracking-[0.3em] text-[#4B2E2E]/45">Skills</div>
               <h2 className="mt-4 text-3xl font-semibold sm:text-4xl">Tap into the way I work.</h2>
               <p className="mt-5 max-w-xl text-base leading-8 text-[#4B2E2E]/70">
-                Instead of a flat list, this section makes your skillset feel dynamic. Click between categories and customize the descriptions based on your strongest experiences once your resume is added.
+                My skill set spans product execution, AI systems, data workflows, cloud foundations, and frontend development, shaped through startup work, technical projects, and cross-functional collaboration.
               </p>
               <div className="mt-8 flex flex-wrap gap-3">
                 {skillGroups.map((group) => (
@@ -646,9 +760,7 @@ export default function InteractivePersonalWebsite() {
                       className="rounded-3xl border border-[#F1D6DC] bg-black/20 p-5 transition hover:bg-[#FFF7FA]"
                     >
                       <div className="text-lg font-medium">{skill}</div>
-                      <p className="mt-2 text-sm leading-7 text-[#4B2E2E]/60">
-                        Add a one line proof point here tied to your resume so each skill feels earned and specific.
-                      </p>
+                      <p className="mt-2 text-sm leading-7 text-[#4B2E2E]/60">{skillProofs[skill]}</p>
                     </motion.div>
                   ))}
                 </div>
@@ -664,7 +776,7 @@ export default function InteractivePersonalWebsite() {
                 <div className="text-sm uppercase tracking-[0.3em] text-[#4B2E2E]/45">Contact</div>
                 <h2 className="mt-4 text-3xl font-semibold sm:text-4xl">Let’s connect</h2>
                 <p className="mt-5 max-w-xl text-base leading-8 text-[#4B2E2E]/70">
-                  Open to product, AI, and data opportunities. The easiest way to reach me is through LinkedIn or email.
+                  Open to product, AI, data, and startup opportunities. The best way to reach me is through LinkedIn or email.
                 </p>
               </div>
 
